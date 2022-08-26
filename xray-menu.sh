@@ -996,6 +996,10 @@ menu_sts() {
     fi
 }
 clear
+echo -e ""
+echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "Client Name   : Ozo"
+echo -e "Expiry script : Never Expired"
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "\E[44;1;39m               ⇱ MULTIPORT MENU ⇲                 \E[0m"
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
@@ -1040,12 +1044,6 @@ echo -e ""
 echo -e " [\e[36m•111\e[0m] BOT PANEL"
 echo -e ""
 echo -e "Press x or [ Ctrl+C ] • To-Exit"
-echo -e ""
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "Client Name   : $Name"
-echo -e "Expiry script : $Exp"
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo ""
 read -p " Select menu : " opt
 echo -e ""
 case $opt in
