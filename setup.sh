@@ -66,23 +66,13 @@ apt-get install socat -y
 apt install figlet -y
 apt install git -y
 clear
-echo "Add Domain for vmess/vless/trojan dll"
-echo " "
-read -rp "Input ur domain : " -e pp
-    if [ -z $pp ]; then
-        echo -e "
-        Nothing input for domain!
-        Then a random domain will be created
-        "
-        sleep 2
-        sub=lukavpn`</dev/urandom tr -dc a-z0-9 | head -c4`
-        echo "peler=${sub}" > /root/domain
-    else
-        echo "peler=$pp" > /root/domain
-    fi
-wget -q "https://raw.githubusercontent.com/bracoli/ko/main/cf.sh" && chmod +x cf.sh && ./cf.sh
+echo "Please Input Your Domain Name"
+read -p "Input Your Domain : " host
+if [ -z $host ]; then
+    echo "No Domain Inserted !"
+else
+    echo $host >/root/domain
 fi
-
 echo -e "${RED}Installing XRAY${NC}"
 sleep 2
 
@@ -103,7 +93,7 @@ systemctl restart nginx
 cd
 echo "menu" >>/root/.profile
 echo " "
-echo "===================-[ LUKAKU Multiport ]-===================="
+echo "===================-[ Multiport ]-===================="
 echo ""
 echo "------------------------------------------------------------"
 echo ""
@@ -119,7 +109,7 @@ echo "   - XRAY  Vless None TLS       : 8000" | tee -a log-install.txt
 echo ""
 echo "------------------------------------------------------------"
 echo ""
-echo "===================-[ LUKAKU Multiport ]-===================="
+echo "===================-[ Multiport ]-===================="
 echo ""
 rm -f /root/ins-xray.sh
 rm -f /root/setup.sh
