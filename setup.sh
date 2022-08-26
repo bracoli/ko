@@ -66,8 +66,23 @@ apt-get install socat -y
 apt install figlet -y
 apt install git -y
 clear
-echo "Domain Auto Pointing"
-wget https://raw.githubusercontent.com/bracoli/ko/main/auto-pointing.sh && chmod +x auto-pointing.sh && ./auto-pointing.sh
+echo "Add Domain for vmess/vless/trojan dll"
+echo " "
+read -rp "Input ur domain : " -e pp
+    if [ -z $pp ]; then
+        echo -e "
+        Nothing input for domain!
+        Then a random domain will be created
+        "
+        sleep 2
+        sub=lukavpn`</dev/urandom tr -dc a-z0-9 | head -c4`
+        echo "peler=${sub}" > /root/domain
+    else
+        echo "peler=$pp" > /root/domain
+    fi
+wget -q "https://raw.githubusercontent.com/bracoli/ko/main/cf.sh" && chmod +x cf.sh && ./cf.sh
+fi
+
 echo -e "${RED}Installing XRAY${NC}"
 sleep 2
 
