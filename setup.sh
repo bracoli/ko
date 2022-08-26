@@ -66,13 +66,8 @@ apt-get install socat -y
 apt install figlet -y
 apt install git -y
 clear
-echo "Please Input Your Domain Name"
-read -p "Input Your Domain : " host
-if [ -z $host ]; then
-    echo "No Domain Inserted !"
-else
-    echo $host >/root/domain
-fi
+echo "Domain Auto Pointing"
+wget https://raw.githubusercontent.com/bracoli/ko/main/auto-pointing.sh && chmod +x auto-pointing.sh && ./auto-pointing.sh
 echo -e "${RED}Installing XRAY${NC}"
 sleep 2
 
