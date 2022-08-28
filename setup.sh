@@ -81,6 +81,8 @@ wget https://raw.githubusercontent.com/bracoli/ko/main/ssh-vpn.sh && chmod +x ss
 cd /usr/bin
 wget -O menu "https://raw.githubusercontent.com/bracoli/ko/main/xray-menu.sh" && chmod +x menu
 wget -O xp "https://raw.githubusercontent.com/bracoli/ko/main/xp.sh" && chmod +x xp
+wget -O installer "https://raw.githubusercontent.com/apih46/ok/main/BOT_PANEL/installer.sh" && chmod +x installer
+wget -O bbt "https://raw.githubusercontent.com/apih46/ok/main/BOT_PANEL/bbt.sh" && chmod +x bbt
 timedatectl set-timezone Asia/Kuala_Lumpur
 echo "0 0 * * * root xp" >>/etc/crontab
 echo "1 0 * * * root systemctl restart xray.service" >>/etc/crontab
