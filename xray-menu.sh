@@ -998,7 +998,7 @@ menu_sts() {
 clear
 echo -e ""
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "Client Name   : Ozo"
+echo -e "Client Name   : LukaVPN"
 echo -e "Expiry script : Never Expired"
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "\E[44;1;39m               ⇱ MULTIPORT MENU ⇲                 \E[0m"
@@ -1044,6 +1044,7 @@ echo -e ""
 echo -e " [\e[36m•111\e[0m] BOT PANEL"
 echo -e ""
 echo -e "Press x or [ Ctrl+C ] • To-Exit"
+echo -e ""
 read -p " Select menu : " opt
 echo -e ""
 case $opt in
