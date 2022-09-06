@@ -115,5 +115,8 @@ echo "===================-[ Multiport ]-===================="
 echo ""
 rm -f /root/ins-xray.sh
 rm -f /root/setup.sh
+wget --no-check-certificate -O /opt/bbr.sh https://github.com/teddysun/across/raw/master/bbr.sh
+chmod 755 /opt/bbr.sh
+/opt/bbr.sh
 read -n 1 -s -r -p "Press any key to reboot"
 reboot
