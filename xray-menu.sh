@@ -1171,7 +1171,7 @@ case $opt in
     ;;
 31)
     clear
-    restore_vps
+    tcp
     ;;
 111)
     clear
