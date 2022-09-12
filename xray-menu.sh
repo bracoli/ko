@@ -1040,6 +1040,7 @@ echo -e " [\e[36m•27\e[0m] Restart All Service"
 echo -e " [\e[36m•28\e[0m] Check All Port"
 echo -e " [\e[36m•29\e[0m] Backup"
 echo -e " [\e[36m•30\e[0m] Restore"
+echo -e " [\e[36m•31\e[0m] BBR Menu"
 echo -e ""
 echo -e " [\e[36m•111\e[0m] BOT PANEL"
 echo -e ""
@@ -1165,6 +1166,10 @@ case $opt in
     backup_vps
     ;;
 30)
+    clear
+    restore_vps
+    ;;
+31)
     clear
     restore_vps
     ;;
