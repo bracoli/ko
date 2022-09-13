@@ -1869,7 +1869,7 @@ check_status() {
       if [[ ${run_status} == "running!" ]]; then
         run_status="Started successfully"
       else
-        run_status="failed to activate""
+        run_status="failed to activate"
       fi
     else
       run_status="Acceleration module not installed"
