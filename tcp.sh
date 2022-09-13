@@ -597,6 +597,7 @@ installbbrplusnew() {
     reboot
   fi
   #echo -e "${Tip} After the kernel is installed, please refer to the above information to check whether the installation is successful and manually adjust the kernel boot order"
+
 }
 
 #Enavble BBR+fq
