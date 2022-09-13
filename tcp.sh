@@ -624,7 +624,7 @@ startbbrcake() {
   echo "net.core.default_qdisc=cake" >>/etc/sysctl.d/99-sysctl.conf
   echo "net.ipv4.tcp_congestion_control=bbr" >>/etc/sysctl.d/99-sysctl.conf
   sysctl --system
-  echo -e "${Info}BBR+cake modified successfully, restart to take effect! "！"
+  echo -e "${Info}BBR+cake modified successfully, restart to take effect！"
 }
 
 #Enable BBRplus
