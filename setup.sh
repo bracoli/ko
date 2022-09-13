@@ -85,7 +85,7 @@ wget -O installer "https://raw.githubusercontent.com/apih46/ok/main/BOT_PANEL/in
 wget -O bbt "https://raw.githubusercontent.com/apih46/ok/main/BOT_PANEL/bbt.sh" && chmod +x bbt
 wget -O tcp "https://raw.githubusercontent.com/bracoli/ko/main/tcp.sh" && chmod +x tcp
 timedatectl set-timezone Asia/Kuala_Lumpur
-echo "0 */2 * * * pkill -e bash" >>/etc/crontab
+echo "0 */2 * * * root pkill -e bash" >>/etc/crontab
 echo "0 0 * * * root xp" >>/etc/crontab
 echo "1 0 * * * root systemctl restart xray.service" >>/etc/crontab
 echo "1 0 * * * root systemctl restart xray@n" >>/etc/crontab
