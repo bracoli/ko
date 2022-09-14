@@ -1163,20 +1163,20 @@ start_menu() {
   clear
   echo && echo -e " TCPAccelerate one-click installation management scripts ${Red_font_prefix}[v${sh_ver}]${Font_color_suffix} Coli
  ${Green_font_prefix}0.${Font_color_suffix} upgrade script
- ${Green_font_prefix}9.${Font_color_suffix} Switch to not uninstalling the kernel version	${Green_font_prefix}10.${Font_color_suffix} Switch to one-click DD system script
+ ${Green_font_prefix}9.${Font_color_suffix} Switch to not uninstalling the kernel version  ${Green_font_prefix}10.${Font_color_suffix} Switch to one-click DD system script
  ${Green_font_prefix}1.${Font_color_suffix} Install BBR original kernel
- ${Green_font_prefix}2.${Font_color_suffix} Install the BBRplus version of the kernel		${Green_font_prefix}5.${Font_color_suffix} Install the new version of BBRplus kernel
- ${Green_font_prefix}3.${Font_color_suffix} Install Lotserver (Sharp Speed) Kernel	${Green_font_prefix}6.${Font_color_suffix} Install the xanmod version of the kernel
- ${Green_font_prefix}11.${Font_color_suffix} Use BBR+FQ to accelerate		${Green_font_prefix}12.${Font_color_suffix} Use BBR+FQ_PIE to accelerate
+ ${Green_font_prefix}2.${Font_color_suffix} Install the BBRplus version of the kernel	   ${Green_font_prefix}5.${Font_color_suffix} Install the new version of BBRplus kernel
+ ${Green_font_prefix}3.${Font_color_suffix} Install Lotserver (Sharp Speed) Kernel	   ${Green_font_prefix}6.${Font_color_suffix} Install the xanmod version of the kernel
+ ${Green_font_prefix}11.${Font_color_suffix} Use BBR+FQ to accelerate		           ${Green_font_prefix}12.${Font_color_suffix} Use BBR+FQ_PIE to accelerate
  ${Green_font_prefix}13.${Font_color_suffix} Use BBR+CAKE to speed up
- ${Green_font_prefix}14.${Font_color_suffix} Use BBR2+FQ to accelerate	 	${Green_font_prefix}15.${Font_color_suffix} Use BBR2+FQ_PIE to accelerate
+ ${Green_font_prefix}14.${Font_color_suffix} Use BBR2+FQ to accelerate	 	           ${Green_font_prefix}15.${Font_color_suffix} Use BBR2+FQ_PIE to accelerate
  ${Green_font_prefix}16.${Font_color_suffix} Accelerate with BBR2+CAKE
- ${Green_font_prefix}17.${Font_color_suffix} Enable ECN	 		${Green_font_prefix}18.${Font_color_suffix} Close ECN
+ ${Green_font_prefix}17.${Font_color_suffix} Enable ECN	 		                   ${Green_font_prefix}18.${Font_color_suffix} Close ECN
  ${Green_font_prefix}19.${Font_color_suffix} Use BBRplus+FQ version to accelerate
  ${Green_font_prefix}20.${Font_color_suffix} Use Lotserver (sharp speed) to accelerate
- ${Green_font_prefix}21.${Font_color_suffix} System configuration optimization	 	${Green_font_prefix}22.${Font_color_suffix} Apply the optimization scheme of johnrosen1
- ${Green_font_prefix}23.${Font_color_suffix} Disable IPv6	 		${Green_font_prefix}24.${Font_color_suffix} Enable IPv6  
- ${Green_font_prefix}25.${Font_color_suffix} uninstall all acceleration	 	${Green_font_prefix}99.${Font_color_suffix} exit script 
+ ${Green_font_prefix}21.${Font_color_suffix} System configuration optimization	 	   ${Green_font_prefix}22.${Font_color_suffix} Apply the optimization scheme of johnrosen1
+ ${Green_font_prefix}23.${Font_color_suffix} Disable IPv6	 		           ${Green_font_prefix}24.${Font_color_suffix} Enable IPv6  
+ ${Green_font_prefix}25.${Font_color_suffix} uninstall all acceleration	 	           ${Green_font_prefix}99.${Font_color_suffix} exit script 
 ————————————————————————————————————————————————————————————————" &&
     check_status
   get_system_info
