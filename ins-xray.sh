@@ -96,7 +96,9 @@ sleep 2
 # Uuid Service
 uuid=$(cat /proc/sys/kernel/random/uuid)
 # INSTALL XRAY
-wget -c -P /etc/samvpn/xray/xray "https://github.com/dharak36/Xray-core/releases/download/v1.0.0/xray.linux.64bit"
+wget -c -P /etc/samvpn/xray/ "https://github.com/XTLS/Xray-core/releases/download/v1.6.6-2/Xray-linux-64.zip"
+unzip -o /etc/samvpn/xray/Xray-linux-64.zip -d /etc/samvpn/xray
+rm -rf /etc/samvpn/xray/Xray-linux-64.zip
 chmod 655 /etc/samvpn/xray/xray
 # XRay boot service
 cat <<EOF >/etc/systemd/system/xray.service
