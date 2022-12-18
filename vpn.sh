@@ -184,6 +184,30 @@ echo '</ca>' >> /etc/openvpn/client-tcp-1194.ovpn
 # Copy config OpenVPN client ke home directory root agar mudah didownload ( TCP 1194 )
 cp /etc/openvpn/client-tcp-1194.ovpn /home/vps/public_html/client-tcp-1194.ovpn
 
+# masukkan certificatenya ke dalam config client Umobile
+echo '<ca>' >> /etc/openvpn/Umobile-${domain}.ovpn
+cat /etc/openvpn/server/ca.crt >> /etc/openvpn/Umobile-${domain}.ovpn
+echo '</ca>' >> /etc/openvpn/Umobile-${domain}.ovpn
+
+# Copy config OpenVPN client ke home directory root agar mudah didownload ( TCP 1194 )
+cp /etc/openvpn/Umobile-${domain}.ovpn /home/vps/public_html//etc/openvpn/Umobile-${domain}.ovpn
+
+# masukkan certificatenya ke dalam config client Maxis A
+echo '<ca>' >> /etc/openvpn/Maxis-A-${domain}.ovpn
+cat /etc/openvpn/server/ca.crt >> /etc/openvpn/Maxis-A-${domain}.ovpn
+echo '</ca>' >> /etc/openvpn/Maxis-A-${domain}.ovpn
+
+# Copy config OpenVPN client ke home directory root agar mudah didownload ( TCP 1194 )
+cp /etc/openvpn/Maxis-A-${domain}.ovpn /home/vps/public_html/Maxis-A-${domain}.ovpn
+
+# masukkan certificatenya ke dalam config client Maxis B
+echo '<ca>' >> /etc/openvpn/Maxis-B-${domain}.ovpn
+cat /etc/openvpn/server/ca.crt >> /etc/Maxis-B-${domain}.ovpn
+echo '</ca>' >> /etc/openvpn/Maxis-B-${domain}.ovpn
+
+# Copy config OpenVPN client ke home directory root agar mudah didownload ( TCP 1194 )
+cp /etc/openvpn/Maxis-B-${domain}.ovpn /home/vps/public_html/Maxis-B-${domain}.ovpn
+
 # masukkan certificatenya ke dalam config client UDP 2200
 echo '<ca>' >> /etc/openvpn/client-udp-2200.ovpn
 cat /etc/openvpn/server/ca.crt >> /etc/openvpn/client-udp-2200.ovpn
