@@ -93,6 +93,7 @@ sleep 2
 /root/.acme.sh/acme.sh --set-default-ca --server letsencrypt
 /root/.acme.sh/acme.sh --issue -d $domain --standalone -k ec-256 --server letsencrypt >>/etc/samvpn/tls/$domain.log
 ~/.acme.sh/acme.sh --installcert -d $domain --fullchainpath /etc/samvpn/xray/xray.crt --keypath /etc/samvpn/xray/xray.key --ecc
+wget -q -O /usr/bin/autobackup "https://raw.githubusercontent.com/bracoli/ko/main/autobackup.sh" && chmod +x /usr/bin/autobackup
 # Uuid Service
 uuid=$(cat /proc/sys/kernel/random/uuid)
 # INSTALL XRAY
