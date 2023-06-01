@@ -653,11 +653,10 @@ systemctl enable xray.service
 
 #Fix crontab
 echo "57,58 4 * * * root systemctl restart stunnel4" >>/etc/crontab
-
 echo "57,58 4 * * * root systemctl restart xray@n" >>/etc/crontab
-
 echo "57,58 4 * * * root systemctl restart xray.service" >>/etc/crontab
-
-echo "57,58 4 * * * root systemctl restart xray.service" >>/etc/crontab
-
 echo "57,58 4 * * * root systemctl restart dropbear" >>/etc/crontab 
+
+
+
+
