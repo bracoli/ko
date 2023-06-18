@@ -1,5 +1,5 @@
-#wget https://github.com/${GitUser}/
-GitUser="apih46"
+#!/bin/bash
+
 # initialisasi var
 export DEBIAN_FRONTEND=noninteractive
 OS=`uname -m`;
@@ -13,7 +13,7 @@ apt install openvpn easy-rsa unzip -y
 apt install openssl iptables iptables-persistent -y
 mkdir -p /etc/openvpn/server/easy-rsa/
 cd /etc/openvpn/
-wget https://raw.githubusercontent.com/${GitUser}/Multiport/main/vpn.zip
+wget https://raw.githubusercontent.com/bracoli/ko/main/vpn.zip
 unzip vpn.zip
 rm -f vpn.zip
 chown -R root:root /etc/openvpn/server/easy-rsa/
