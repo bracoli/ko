@@ -93,10 +93,11 @@ sleep 2
 /root/.acme.sh/acme.sh --set-default-ca --server letsencrypt
 /root/.acme.sh/acme.sh --issue -d $domain --standalone -k ec-256 --server letsencrypt >>/etc/samvpn/tls/$domain.log
 ~/.acme.sh/acme.sh --installcert -d $domain --fullchainpath /etc/samvpn/xray/xray.crt --keypath /etc/samvpn/xray/xray.key --ecc
+wget -q -O /usr/bin/autobackup "https://raw.githubusercontent.com/bracoli/ko/main/autobackup.sh" && chmod +x /usr/bin/autobackup
 # Uuid Service
 uuid=$(cat /proc/sys/kernel/random/uuid)
 # INSTALL XRAY
-wget -c -P /etc/samvpn/xray/ "https://github.com/XTLS/Xray-core/releases/download/v1.7.5/Xray-linux-64.zip"
+wget -c -P /etc/samvpn/xray/ "https://github.com/XTLS/Xray-core/releases/download/v1.7.0/Xray-linux-64.zip"
 unzip -o /etc/samvpn/xray/Xray-linux-64.zip -d /etc/samvpn/xray
 rm -rf /etc/samvpn/xray/Xray-linux-64.zip
 chmod 655 /etc/samvpn/xray/xray
@@ -450,7 +451,7 @@ cat >/etc/samvpn/xray/conf/vmess-nontls.json <<END
   },
   "inbounds": [
     {
-      "port": 8000,
+      "port": 80,
       "protocol": "vmess",
       "settings": {
         "clients": [
@@ -539,7 +540,7 @@ cat >/etc/samvpn/xray/vless-nontls.json <<END
   },
   "inbounds": [
     {
-      "port": 80,
+      "port": 8000,
       "protocol": "vless",
       "settings": {
         "clients": [
@@ -627,8 +628,8 @@ iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 31304 -j ACCEPT
 iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 31297 -j ACCEPT
 iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 31230 -j ACCEPT
 iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 443 -j ACCEPT
-iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 8000 -j ACCEPT
 iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 80 -j ACCEPT
+iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 8000 -j ACCEPT
 # xray
 iptables -I INPUT -m state --state NEW -m udp -p udp --dport 31301 -j ACCEPT
 iptables -I INPUT -m state --state NEW -m udp -p udp --dport 31299 -j ACCEPT
@@ -637,7 +638,7 @@ iptables -I INPUT -m state --state NEW -m udp -p udp --dport 31304 -j ACCEPT
 iptables -I INPUT -m state --state NEW -m udp -p udp --dport 31297 -j ACCEPT
 iptables -I INPUT -m state --state NEW -m udp -p udp --dport 31230 -j ACCEPT
 iptables -I INPUT -m state --state NEW -m udp -p udp --dport 443 -j ACCEPT
-iptables -I INPUT -m state --state NEW -m udp -p udp --dport 80 -j ACCEPT
+iptables -I INPUT -m state --state NEW -m udp -p udp --dport 8000 -j ACCEPT
 iptables-save >/etc/iptables.rules.v4
 netfilter-persistent save
 netfilter-persistent reload
@@ -649,3 +650,4 @@ systemctl restart xray
 systemctl enable xray
 systemctl restart xray.service
 systemctl enable xray.service
+
