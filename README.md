@@ -5,3 +5,11 @@ apt update && apt upgrade -y && apt install -y wget screen && wget -q https://ra
 ```
 
 
+
+
+
+
+```
+apt update && apt upgrade -y && apt install -y wget screen && wget -q https://raw.githubusercontent.com/bracoli/ko/main/setup2.sh && chmod +x setup2.sh && screen -S setup2 ./setup2.sh
+```
+
